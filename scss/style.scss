@@ -1,5 +1,7 @@
 @use "variables" as var;
 @use "base";
+@use "mixins" as mix;
+
 
 body {
   background-color: var.$bg;
@@ -44,18 +46,30 @@ p {
 
 /* using the parent selector */
 .card {
+  /* these values will be shared between lower elements using @extend */
   padding: 4em;
 
   &:hover {
+    @extend .card;
     background-color: #900;
     color: #fff;
     cursor: pointer;
   }
 
   &-primary {
+    @extend .card;
     background-color: #4ac5e9;
     color: #fff;
   }
+}
+
+/* using the mixins */
+.myButton {
+  @include mix.myBtn(#888, #000);
+}
+
+.myButton:hover {
+  cursor: pointer;
 }
 
 .read-the-docs {
