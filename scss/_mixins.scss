@@ -10,5 +10,16 @@
     margin-bottom: 24px;
     margin-left: 16px;
     border: 0;
+
+    &:hover {
+        cursor: pointer;
+        color: aqua;
+    }
+
+    span {
+        color: blueviolet;
+        display: inline-block;
+        margin: 4px;
+    }
 }
 

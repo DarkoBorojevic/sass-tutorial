@@ -66,10 +66,11 @@ p {
 /* using the mixins */
 .myButton {
   @include mix.myBtn(#888, #000);
-}
 
-.myButton:hover {
-  cursor: pointer;
+  &-new {
+    @extend .myButton;
+    background-color: orange;
+  }
 }
 
 .read-the-docs {
