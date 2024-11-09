@@ -1,6 +1,7 @@
 @use "variables" as var;
 @use "base";
 @use "mixins" as mix;
+@use "lists";
 
 
 body {
@@ -73,6 +74,9 @@ p {
   }
 }
 
+/* mixin using interpolation */
+@include mix.myNewBtn("-primary");
+
 .read-the-docs {
   color: #888;
 }
@@ -96,6 +100,26 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* placeholders */
+%span {
+  background-color: blueviolet;
+  color: #fff;
+  display: inline-block;
+  margin: 4em 4em;
+  padding: 2em;
+  min-width: 224px;
+}
+
+.span-primary {
+  @extend %span;
+  background-color: chartreuse;
+}
+
+.span-secondary {
+  @extend %span;
+  background-color: #213547;
 }
 
 @media (prefers-color-scheme: light) {
