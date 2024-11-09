@@ -1,4 +1,6 @@
+/* variables */
 $bg: #4852;
+$primary-color: red;
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -8,7 +10,6 @@ $bg: #4852;
 
 a {
   font-weight: 500;
-  color: #646cff;
   text-decoration: inherit;
 }
 
@@ -28,6 +29,7 @@ body {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  color: $primary-color;
 }
 
 body {
@@ -35,6 +37,10 @@ body {
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+}
+
+p {
+  color: $primary-color;
 }
 
 .logo {

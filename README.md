@@ -4,7 +4,7 @@ This is a SASS tutorial that covers all segments of using CSS with SASS. This pr
 
 ## Available Scripts
 
-In the project directory, you can run:
+Write your SASS in style.scss file. In the root directory, you can run:
 
 ### `npm run dev`
 
