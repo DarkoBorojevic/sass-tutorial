@@ -1,3 +1,4 @@
+@use "sass:list";
 @use "variables" as var;
 @use "base";
 @use "mixins" as mix;
@@ -125,6 +126,13 @@ button:focus-visible {
 .span-secondary {
   @extend %span;
   background-color: #213547;
+}
+
+/* using a for loop to set font sizes on multiple elements */
+@for $i from 1 through list.length(var.$font-size) {
+  .blockquote-#{$i} {
+    font-size: list.nth(var.$font-size, $i);
+  }
 }
 
 @media (prefers-color-scheme: light) {
