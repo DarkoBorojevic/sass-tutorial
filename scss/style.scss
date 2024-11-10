@@ -29,7 +29,7 @@ div {
   color: #535bf2;
 }
 
-p {
+code {
   color: var.$secondary-color;
 }
 
@@ -100,6 +100,11 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* mixin using a list to create different div elements */
+@each $name, $bg, $col in mix.$divs {
+  @include mix.newDiv($name, $bg, $col);
 }
 
 /* placeholders */

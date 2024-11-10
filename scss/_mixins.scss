@@ -40,3 +40,18 @@
         border: 0;
     }
 }
+
+/* mixin using a list to create a lot of div elements */
+@mixin newDiv($name: "", $bg: #444, $col: white) {
+    .newDiv#{$name} {
+        background-color: $bg;
+        color: $col;
+        padding: 24px;
+        border-radius: 8px;
+        margin: 2px;
+    }
+}
+
+$divs: 
+-primary #4ab6e9 hotpink, 
+-secondary #9ad4 brown;
